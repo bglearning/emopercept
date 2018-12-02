@@ -11,6 +11,8 @@ pandas = "*"
 scikit-learn = "*"
 matplotlib = "*"
 wget = "*"
+ipykernel = "*"
+jupyter = "*"
 
 [requires]
 python_version = "3.6"
