@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -37,6 +39,16 @@ def main():
     dump(best_model, model_filepath) 
 
     print('Final model saved to ', model_filepath)
+
+    # Save emotion map
+    inverse_emotion_map = {v: k for k, v in emotion_map.items()}
+
+    inv_emotion_map_path = 'out/inv_emotion_map.json'
+
+    with open(inv_emotion_map_path, 'w') as f:
+        json.dump(inverse_emotion_map, f)
+
+    print('Inverse emotion map saved to ', inv_emotion_map_path)
 
 
 if __name__ == '__main__':
