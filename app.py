@@ -13,7 +13,7 @@ def emopercept():
         emotion = inv_emotion_map[prediction]
     else:
         text = ''
-        emotion = 'Nothing'
+        emotion = ''
     return render_template('index.html', text=text, emotion=emotion)
 
 
